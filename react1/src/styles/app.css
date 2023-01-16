@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App{
+    width: 800px;
+}
+
+.post{
+    display: flex;
+    padding: 15px;
+    border: 2px solid teal;
+    margin-top: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+.post__content{
+    color: #000;
+    text-decoration: none;
+}
+.post-enter{
+    transform: translateX(-350px);
+}
+.post-enter-active{
+    transform: translateX(0px);
+    transition:  all 500ms ease-in;
+}
+.post-exit{
+    opacity:1;
+}
+.post-exit-active{
+    transform: translateX(-350px);
+    transition: all 500ms ease-in;
+}
+.page__wrapper{
+    margin-top: 30px;
+    display: flex;
+}
+.page{
+    border:1px solid teal;
+    cursor: pointer;
+    padding: 10px;
+}
+.page__current{
+    border: none;
+    background-color: teal;
+    color: white;
+}
+header{
+    background-color: black;
+    height: 100vh;
+    width: 70px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header a{
+    transform: rotate(270deg);
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    position: relative;
+}
+header a:first-child{
+    margin-bottom: 50px;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    min-height: 85vh;
+}
+footer{
+    margin: 30px 0;
+    text-align: center;
+}
+header a::after{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: " ";
+    height: 1px;
+    background-color: #fff;
+    width: 0%;
+    transition: all .15s linear;
+}
+header a:hover::after{
+    width: 100%;
+}
+.homePage{
+    height: 50vh;
+    width: 70%;
+    margin: 200px auto 0 auto;
+    border: 1px solid teal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.active-link::after{
+    width: 100%;
+}
